@@ -1,0 +1,84 @@
+<?{% extends "menu.html" %}
+
+{% block title %}Accueil du site{% endblock %}
+{% block head %}
+  {{ parent() }}?>
+  
+
+<?{% endblock %}
+{% block content %}?>
+
+
+<h4><center>Accueil : Gestion de l'ensemble des donnÃ©es</h4></center>
+
+
+<table class="table table-hover" id="table">
+    <thead>
+
+
+<TABLE BORDER="1">
+	<thead>
+	<tr>
+		<th>Identifiant du compte</th>
+		<th>Date du compte </th>  
+		<th>Nom du compte </th>
+		<th>Login</th>
+		<th>Mot de passe </th>
+		<th>Nom du service </th>
+		<th>Url du service </th>
+		<th>Port du service </th>
+	</tr>
+	</thead>
+	
+	<?{% for compte in lescomptes %}
+	{% if compte.testverifierObsolescence() == 1%)?>
+	        <tr class='table-success' id={{compte.id_compte}}>
+            <?{% else %} ?>
+        <tr class='table-warning' id={{compte.id_compte}}>
+           <? {% endif %} ?>
+            <td>{{compte.date}}</td>
+            <td>{{compte.nom}}</td>
+
+            <td class="mdp" val="{{compte.motDePasse}}">{% for i in range(0, compte.motDePasse}}|length) %}
+                {% set test = test ~ '*' %}
+                {% endfor %}{{test}}</td>
+            <td>{{compte.dateChangementMdp}}</td>
+            <td>{{compte.date}}</td>
+	
+	<tr>
+		<TD>{{compte.id_compte}}</TD>
+		<TD>{{compte.date}}</TD>
+		<TD>{{compte.nom}}</TD>
+		<TD>{{compte.login}}</TD>
+		<TD>{{compte.motDePasse}}</TD>
+		<TD>{{compte.nomService}}</TD>
+		<TD>{{compte.url}}</TD>
+		<TD>{{compte.port}}</TD>
+		</tr>
+	</TABLE>
+		</tr>
+
+	{% endfor %}
+	<h4>Si votre mot de passe date de plus de 3 mois , merci de le modifier</h4>	
+	
+	<div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Choix du service</h4>
+            </div>
+            <div class="modal-body">
+                <select class="form-control service" name="service">
+                <option value="null">Aucun Service</option>
+                    {% for service in colonne%}
+                    <option value={{service.id_service}}>{{ service.nom }}</option>
+                    {% endfor %}
+                </select>
+
+	
+	
+	
+	<?php
+
+?>
+		
+
+

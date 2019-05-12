@@ -1,0 +1,44 @@
+{<?% extends "layout.html" %}
+<{% block title %}Login page{% endblock %}
+{% block head %}
+  {{ parent() }} ?>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Inscription</title>
+		<h1><center><b>Nouveau sur le site? Inscription dÃ¨s maintenant! </b></h1></center></br>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<?{% endblock %}
+{% block content %}?>
+    <body style="margin-top:10%;">
+        <form method="post" id="formulaire" action="/portefeuilleNumerique/src/public/index.php/login">
+		            <div class="container">
+            <div class="form-group col-sm-6 col-md-offset-3">
+            <div class="form-group col-sm-12">
+                <label for="id">Identifiant:</label>
+                <input type="text" id="id" name="id" class="form-control" autocomplete="on" required>
+            </div>
+			<div class="form-group col-sm-12">
+                <label for="nom">Nom de votre compte:</label>
+                <input type="text" id="id" name="id" class="form-control" autocomplete="on" required>
+            </div>
+            <div class="form-group col-sm-12">
+                <label for="passw">Mot de passe:</label>
+                <input type="password" id="mdp" name="mdp" class="form-control" autocomplete="on" required>
+            </div>
+			<div class="form-group col-sm-12">
+                <label for="passw2">Confirmer votre mot de passe:</label>
+                <input type="ConfirmPassword" id="mdp2" name="mdp2" class="form-control" autocomplete="on" required>
+            </div>
+            <div class="form-group col-sm-12">
+                <button type="submit" class="btn btn-primary btn-lg btn-block" name="inscription">VALIDER</button>
+            </div></br>
+
+            </div>
+            </div>
+            </div>
+        </form>
+	</body>
+<?{% endblock %}
+{% extends "layoutglobal.html" %}?>

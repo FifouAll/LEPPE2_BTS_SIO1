@@ -1,0 +1,30 @@
+<?{% extends "menu.html" %}
+
+{% block title %}Effacement du compte{% endblock %}
+{% block head %}
+  {{ parent() }} ?>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Effacement du compte</title>
+		<h1><center><b>Effacement du compte sÃ©lectionnÃ© </b></h1></center></br>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<?{% endblock %}
+{% block content %} ?>
+    <body style="margin-top:10%;">
+        <form method="post" id="formulaire" action="/portefeuilleNumerique/src/public/index.php/EffacerCompte">
+		            <div class="container">
+            <div class="form-group col-sm-6 col-md-offset-3">
+            <div class="form-group col-sm-12">
+                <label for="id"><u>Identifiant du compte:</u></label>
+                <input type="text" id="id" name="id" class="form-control" autocomplete="on" required>
+            </div>
+			<div class="form-group col-sm-12">
+                <button type="submit" class="btn btn-primary btn-lg btn-block" name="effacer">Effacer ce compte?</button></br>
+				
+			<li class="nav-item active">
+            <a class="nav-link" href="/portefeuilleNumerique/src/public/index.php/login" class="text-white">Retour Ã  l'accueil</a>
+							</li>
+            </div></br>
+        </form>

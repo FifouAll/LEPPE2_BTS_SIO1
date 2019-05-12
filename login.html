@@ -1,0 +1,48 @@
+<?{% extends "layout.html" %}
+
+{% block title %}Login page{% endblock %}
+{% block head %}
+  {{ parent() }} ?>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Inscription</title>
+		<h1><center><b>Bienvenue sur le site du Portefeuille NumÃ©rique </b></h1></center></br>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<?{% endblock %}
+{% block content %} ?>
+    <body style="margin-top:10%;">
+        <form method="post" id="formulaire" action="/portefeuilleNumerique/src/public/index.php/login">  
+            <div class="container">
+            <div class="form-group col-sm-6 col-md-offset-3">
+            <div class="form-group col-sm-12">
+                <label for="adm">Adresse Mail:</label>
+                <input type="text" id="adm" name="adm" class="form-control" autocomplete="on" required>
+            </div>
+            <div class="form-group col-sm-12">
+                <label for="prenom">Mot de passe:</label>
+                <input type="password" id="mdp" name="mdp" class="form-control" autocomplete="on" required></br>
+            <div class="form-group col-sm-12">
+                <button type="submit" class="btn btn-primary btn-lg btn-block" name="connexion">Connexion</button>
+            </div></br>
+			            <div class="form-group col-sm-12">
+						<a href="/portefeuilleNumerique/src/public/index.php/PartagerComptes/Inscription">Inscription</a>
+						
+                </div></br>
+				
+				            </div></br>
+			            <div class="form-group col-sm-12">
+						<a href="/portefeuilleNumerique/src/public/index.php/PartagerComptes/Renvoyer">Mot de passe oubliÃ©?</a>
+						
+                </div></br>
+ 
+            </div>
+            </div>
+            </div>
+        </form>   
+<?{% endblock %}
+
+{% extends "layoutglobal.html" %}?>
+
+<? //survol Ã  exploitÃ© ?>
